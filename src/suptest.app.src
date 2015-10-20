@@ -1,0 +1,12 @@
+{application, suptest,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { suptest_app, []}},
+  {env, []}
+ ]}.
