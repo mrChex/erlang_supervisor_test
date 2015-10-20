@@ -24,9 +24,6 @@ start_link() ->
 
 init([]) ->
 
-    {ok, Pid} = suptest_srv:start_link(),
-    register(suptest_srv, Pid),
-
     RestartStrategy = one_for_one,
     MaxRestarts = 5,
     MaxSecondsBetweenRestarts = 10,
@@ -40,5 +37,3 @@ init([]) ->
 
 
     {ok, { SupFlags, [AChild]} }.
-    % {ok, { SupFlags, []} }.
-

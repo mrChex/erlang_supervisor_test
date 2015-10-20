@@ -17,7 +17,10 @@ build: depends
 	$(REBAR) compile
 
 start: build
-	./start.sh
+	./start.sh start
+
+manual_start: build
+	./start.sh manual_start
 
 
 .PHONY: clean depends build start

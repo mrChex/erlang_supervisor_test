@@ -27,7 +27,7 @@ handle_info(Msg, S) ->
     {stop, normal, S}.
  
 terminate(_Reason, _State) ->
-    io:format("terminated"),
+    io:format("terminated~n"),
     ok.
  
 code_change(_OldVsn, State, _Extra) ->
