@@ -24,16 +24,6 @@ start_link() ->
 
 init([]) ->
 
-    RestartStrategy = one_for_one,
-    MaxRestarts = 5,
-    MaxSecondsBetweenRestarts = 10,
-    SupFlags = {RestartStrategy, MaxRestarts, MaxSecondsBetweenRestarts},
-    
-    Restart = permanent,
-    Shutdown = 5000,
-    Type = worker,
-    AChild = {'suptest_srv', {'suptest_srv', start_link, []},
-                      Restart, Shutdown, Type, []},
-
-
-    {ok, { SupFlags, [AChild]} }.
+    {ok, { {one_for_one, 5, 10}, [
+        ?CHILD(suptest_srv, worker)
+    ]} }.

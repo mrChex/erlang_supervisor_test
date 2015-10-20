@@ -2,4 +2,4 @@
 
 export ERL_LIBS="deps"
 
-erl -args_file env/devel.vmargs -pa ebin/ deps/*/ebin -s suptest_app $1
+erl -args_file env/devel.vmargs -config env/devel.config -pa ebin/ deps/*/ebin

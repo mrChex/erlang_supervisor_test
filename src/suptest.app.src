@@ -2,11 +2,12 @@
  [
   {description, ""},
   {vsn, "1"},
-  {registered, []},
+  {registered, [suptest]},
   {applications, [
                   kernel,
                   stdlib
                  ]},
   {mod, { suptest_app, []}},
-  {env, []}
+  {env, []},
+  {start_phases, []}
  ]}.

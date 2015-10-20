@@ -1,1 +1,5 @@
 -boot start_sasl
+
+-sname suptest
+
+-s suptest
